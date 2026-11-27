@@ -36,7 +36,7 @@ API_KEY = (os.environ.get("API_KEY") or "").strip()
 SHOW_RAW = False   # đổi thành True để in nguyên phản hồi của API khi cần tìm tên trường
 
 
-def post_json(url, headers, body, timeout=60):
+def post_json(url, headers, body, timeout=120):
     """Gửi POST JSON, trả về JSON phản hồi. Chỉ dùng thư viện chuẩn (urllib)."""
     req = urllib.request.Request(
         url, data=json.dumps(body).encode("utf-8"), method="POST",

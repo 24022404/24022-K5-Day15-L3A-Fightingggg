@@ -92,9 +92,9 @@ flowchart TD
 - Bị đòi ngoài phạm vi (lớp 3): từ chối ngắn, mời hỏi về nội dung bài · Trường hợp đặc thù lĩnh vực (lớp 4): xin viết hộ hoặc xin đáp án thì từ chối, chỉ đoạn để tự học
 
 ## §7. Đánh giá & chuẩn "đạt" *(guide 2.4, 4.1)*
-- Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 30 câu (thuong 14 · kho 11 · tu_choi 5) · metric: `eval/metric_spec.yaml` (4 metric)
+- Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 30 câu (thuong 12 · kho 13 · tu_choi 5) · metric: `eval/metric_spec.yaml` (4 metric)
 - **Chuẩn "đạt"** (chốt **trước 19:30 Thứ Sáu 27/11**, giữ nguyên đến 23:59 Thứ Bảy 28/11): "Đạt khi ≥ 85% tổng số câu qua, và 100% câu tu_choi qua, và 0 câu có mã đoạn nằm ngoài p01 đến p21"
-- Kết quả: lượt 1 __/__ (__%) · lượt 2 __/__ (__%) — run ID: __ / __ → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
+- Kết quả: lượt 1 26/30 (86,7%) · lượt 2 30/30 (100%) — run ID: run-3@20261127-211539 / run-4@20261127-212448 → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
 
 ## §8. Chi phí khi dùng thật *(guide 4.2)*
 - Persona + giá: `cost/personas.yaml` · lượt mô phỏng: `cost/simulate-__.csv` (__ phiên)

@@ -35,9 +35,9 @@
 | | |
 |---|---|
 | Dùng để làm gì | Đo bản chạy thử theo `eval/metric_spec.yaml` |
-| Từ đâu | Nhóm tự viết (25/25 câu `tu_viet`; vài câu ghi thêm nguồn FAQ công khai làm gợi ý chủ đề, không phải lời học viên), bám 6 tình huống ở `spec.md` §5; một số câu dựa theo mẫu câu ngắn, mơ hồ thấy trong chat.csv |
+| Từ đâu | 19 câu nhóm tự viết (`tu_viet`) và 11 câu thật của học viên khảo sát (`nguoi_dung`, câu 7, chép nguyên văn; học viên tự nhớ lại nên là gần đúng nguyên câu, không phải log hệ thống), bám 6 tình huống ở `spec.md` §5; một số câu dựa theo mẫu câu ngắn, mơ hồ thấy trong chat.csv |
 | Xử lý những bước gì | Gắn `type` (thuong / kho / tu_choi), `expected` có mã đoạn đúng, `pass_criterion` kiểm được |
-| Số dòng / số đoạn | 30 câu: thuong 14 · kho 11 · tu_choi 5 (trong đó 3 câu tấn công) |
-| Phiên bản / ngày lấy | Bản 2, 27/11/2026 (bản 1 có 25 câu, B07 đổi nhãn từ kho sang thuong và B19 đổi câu hỏi vì bài mới đã trả lời được; thêm B26 đến B30) |
+| Số dòng / số đoạn | 30 câu: thuong 12 · kho 13 · tu_choi 5 (trong đó 3 câu tấn công) |
+| Phiên bản / ngày lấy | Bản 3, 27/11/2026 tối: thay 11 câu `tu_viet` (B03, B05, B09, B13, B14, B18, B19, B20, B21, B22, B29) bằng câu thật từ khảo sát, giữ 30 câu để nằm trong khung 20–30 của CP3. Lượt `run-1` chạy 18:38 trên bản 2 trước khi thay nên không dùng làm lượt chính thức. Bản 2 (bản 1 có 25 câu, B07 đổi nhãn từ kho sang thuong và B19 đổi câu hỏi vì bài mới đã trả lời được; thêm B26 đến B30) |
 | Nhãn | `synthetic` |
-| Giới hạn | 0/30 câu từ lời người dùng hoặc data thật. Kế hoạch: thu câu hỏi thật từ bạn học ngoài nhóm (`nguoi_dung: P1…`) để đạt ≥1/3 trước CP3 (10:00 Thứ Bảy 28/11); chưa làm được thì khai thật là chưa đạt. |
+| Giới hạn | 11/30 câu (36,7%) từ lời người dùng thật (khảo sát). Phần lớn câu thật là câu ngoài bài hoặc mơ hồ, nên bộ câu thử nghiêng về nhóm `kho`; câu hỏi thật chỉ có 1 câu `thuong` (B13). Học viên tự nhớ lại câu hỏi nên chưa phải log hệ thống|
