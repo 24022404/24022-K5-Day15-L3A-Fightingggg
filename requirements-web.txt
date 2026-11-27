@@ -1,0 +1,3 @@
+# Bản web (Render). Streamlit không cần ở đây.
+fastapi
+uvicorn

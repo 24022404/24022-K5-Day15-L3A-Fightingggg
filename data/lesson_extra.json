@@ -1,0 +1,300 @@
+{
+ "p01": {
+  "example": "Bạn gõ \"Thủ đô của Việt Nam là\": mô hình chọn mẩu chữ có khả năng cao tiếp theo, ví dụ \"Hà Nội\", rồi cứ thế viết tiếp từng mẩu.",
+  "links": [
+   {
+    "title": "Cloudflare: What is a large language model?",
+    "url": "https://cloudflare.com/learning/ai/what-is-large-language-model"
+   },
+   {
+    "title": "Udemy Blog: How do LLMs work?",
+    "url": "https://blog.udemy.com/how-do-llms-work/"
+   }
+  ],
+  "module": 1
+ },
+ "p02": {
+  "example": "Một câu tiếng Việt ngắn có thể bị tách thành vài token. Chi phí tính theo số token chứ không theo số từ, nên viết dài hơn thì tốn hơn.",
+  "links": [
+   {
+    "title": "Harvard Chan: What is a token in AI?",
+    "url": "https://hsph.harvard.edu/advanced-learning-academy/news/token/"
+   },
+   {
+    "title": "It's FOSS: What are tokens in LLMs?",
+    "url": "https://itsfoss.com/llm-token/"
+   },
+   {
+    "title": "Viblo: Token AI là gì? (tiếng Việt)",
+    "url": "https://viblo.asia/p/token-ai-la-gi-don-vi-du-lieu-va-cua-so-ngu-canh-cua-ai-K9Vy8wKdLQR"
+   }
+  ],
+  "module": 1
+ },
+ "p03": {
+  "example": "Bạn dán một tài liệu rất dài rồi hỏi ở cuối. Phần nằm ngoài cửa sổ ngữ cảnh thì mô hình không nhìn thấy, nên cần cắt nhỏ hoặc chỉ đưa phần liên quan.",
+  "links": [
+   {
+    "title": "Viblo: Cửa sổ ngữ cảnh là gì và quản lý ra sao? (tiếng Việt)",
+    "url": "https://viblo.asia/p/cua-so-ngu-canh-context-window-la-gi-va-quan-ly-ra-sao-lZL9XQkvJQK"
+   },
+   {
+    "title": "IBM: What is a context window?",
+    "url": "https://www.ibm.com/think/topics/context-window"
+   },
+   {
+    "title": "AWS Security Blog: Context window overflow",
+    "url": "https://aws.amazon.com/blogs/security/context-window-overflow-breaking-the-barrier"
+   }
+  ],
+  "module": 1
+ },
+ "p04": {
+  "example": "Cần trả lời đúng một định nghĩa thì dùng temperature thấp. Cần nghĩ nhiều tên gọi khác nhau cho một sản phẩm thì có thể để cao hơn.",
+  "links": [
+   {
+    "title": "IBM: What is LLM temperature?",
+    "url": "https://www.ibm.com/think/topics/llm-temperature"
+   },
+   {
+    "title": "Mistral docs: Sampling and temperature",
+    "url": "https://docs.mistral.ai/cookbooks/concept-deep-dive-sampling-temperature"
+   }
+  ],
+  "module": 1
+ },
+ "p05": {
+  "example": "Hỏi về một bài báo không có thật, mô hình vẫn có thể bịa ra tên tác giả nghe rất hợp lý. Đưa tài liệu nguồn và cho phép nói \"không có trong tài liệu\" giúp giảm lỗi này.",
+  "links": [
+   {
+    "title": "Zapier: What are AI hallucinations?",
+    "url": "https://zapier.com/blog/ai-hallucinations/"
+   }
+  ],
+  "module": 1
+ },
+ "p06": {
+  "example": "Thay vì \"Tóm tắt bài này\", hãy viết: \"Tóm tắt bài này trong 3 gạch đầu dòng, mỗi gạch dưới 20 từ, không thêm ý ngoài bài.\"",
+  "links": [
+   {
+    "title": "web.dev: Prompt engineering",
+    "url": "https://web.dev/learn/ai/prompt-engineering"
+   },
+   {
+    "title": "Claude: Best practices for prompt engineering",
+    "url": "https://claude.com/resources/articles/best-practices-for-prompt-engineering"
+   }
+  ],
+  "module": 1
+ },
+ "p07": {
+  "example": "Học viên hỏi về cửa sổ ngữ cảnh. Hệ thống tìm đoạn p03 trước, đưa vào prompt, rồi mới nhờ mô hình trả lời dựa trên đoạn đó.",
+  "links": [
+   {
+    "title": "AWS Builder Center: What is RAG? A beginner-friendly guide",
+    "url": "https://builder.aws.com/content/3KQHuNUmvOJGDh5Xo8yZrWaN282/what-is-rag-a-beginner-friendly-guide-to-retrieval-augmented-generation"
+   },
+   {
+    "title": "DEV: RAG explained for beginners",
+    "url": "https://dev.to/aashna_mahajan/rag-explained-for-beginners-how-ai-assistants-stop-making-things-up-2i05"
+   }
+  ],
+  "module": 1
+ },
+ "p08": {
+  "example": "Dựng 10 câu thử: 6 câu dễ, 2 câu khó, 2 câu cần từ chối. Chạy lại sau mỗi lần sửa và đếm bao nhiêu câu đạt.",
+  "links": [
+   {
+    "title": "Thoughtworks: How to evaluate an LLM system",
+    "url": "https://www.thoughtworks.com/en-in/insights/blog/generative-ai/how-to-evaluate-an-LLM-system"
+   },
+   {
+    "title": "Arize: The definitive guide to LLM evaluations",
+    "url": "https://arize.com/blog/llm-evaluation-guide/"
+   }
+  ],
+  "module": 1
+ },
+ "p09": {
+  "example": "Gõ \"Hôm nay trời\": mô hình tính xác suất cho từng từ có thể đứng tiếp, như \"đẹp\" hay \"mưa\", rồi chọn một từ. Cả câu có xác suất bằng tích các xác suất từng bước.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Jurafsky và Martin: Speech and Language Processing (bản nháp lần 3)",
+    "url": "https://web.stanford.edu/~jurafsky/slp3/"
+   }
+  ],
+  "module": 2
+ },
+ "p10": {
+  "example": "Giống một dây chuyền nhiều trạm: mỗi trạm (khối) cho các từ trong câu \"nhìn\" nhau để hiểu ngữ cảnh, nhưng từ nào chỉ được nhìn những từ đứng trước nó.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Zhao và cộng sự: A Survey of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.18223"
+   }
+  ],
+  "module": 2
+ },
+ "p11": {
+  "example": "Thử một công thức mới cho mô hình lớn giống như nấu một nồi cơm khổng lồ trên hàng trăm bếp: sai một lần là tốn rất nhiều tiền và thời gian.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Zhao và cộng sự: A Survey of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.18223"
+   }
+  ],
+  "module": 2
+ },
+ "p12": {
+  "example": "Mô hình sau tiền huấn luyện giống người đọc nhiều sách. Tinh chỉnh theo chỉ dẫn là cho họ làm vài trăm bài tập có đáp án để quen cách trả lời đúng yêu cầu.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Zhao và cộng sự: A Survey of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.18223"
+   }
+  ],
+  "module": 2
+ },
+ "p13": {
+  "example": "Hỏi \"cách làm vũ khí\": mô hình chưa căn chỉnh có thể liệt kê các bước, còn mô hình đã căn chỉnh sẽ từ chối và gợi ý hỏi chủ đề khác.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Zhao và cộng sự: A Survey of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.18223"
+   }
+  ],
+  "module": 2
+ },
+ "p14": {
+  "example": "Cho mô hình viết 4 câu trả lời cho cùng một câu hỏi, người đánh giá xếp hạng từ tốt đến kém, rồi mô hình phần thưởng học theo thứ hạng đó để chấm thay người.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Zhao và cộng sự: A Survey of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.18223"
+   }
+  ],
+  "module": 2
+ },
+ "p15": {
+  "example": "Muốn trợ giảng trả lời đúng theo tài liệu mới của khoá: RAG chỉ cần nạp thêm tài liệu, còn fine-tuning phải chuẩn bị dữ liệu và huấn luyện lại.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Gao và cộng sự: Retrieval-Augmented Generation for LLMs, A Survey",
+    "url": "https://arxiv.org/abs/2312.10997"
+   }
+  ],
+  "module": 2
+ },
+ "p16": {
+  "example": "Mẫu: \"Hãy giải thích {khái niệm} cho một học sinh lớp 6.\" Thay {khái niệm} bằng \"token\" là có ngay một prompt hoàn chỉnh.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Anthropic: Prompt engineering overview",
+    "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/overview"
+   }
+  ],
+  "module": 3
+ },
+ "p17": {
+  "example": "Few-shot: đưa 2 câu sai kèm câu đã sửa, rồi đưa câu mới cần sửa. Mô hình bắt chước cách sửa và cả định dạng bạn muốn.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Anthropic: 6 Techniques for Effective Prompt Engineering (CC BY-NC-SA 4.0)",
+    "url": "https://www-cdn.anthropic.com/62df988c101af71291b06843b63d39bbd600bed8.pdf"
+   }
+  ],
+  "module": 3
+ },
+ "p18": {
+  "example": "Hỏi trung bình của 2, 4 và 9. Thay vì đáp thẳng, mô hình viết: 2+4+9=15, có 3 số, 15 chia 3 bằng 5. Mỗi bước đều kiểm tra được.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Anthropic: 6 Techniques for Effective Prompt Engineering (CC BY-NC-SA 4.0)",
+    "url": "https://www-cdn.anthropic.com/62df988c101af71291b06843b63d39bbd600bed8.pdf"
+   }
+  ],
+  "module": 3
+ },
+ "p19": {
+  "example": "Học viên hỏi về temperature. Hệ thống tìm đoạn nói về temperature trong bài, đưa vào prompt cùng câu hỏi, và dặn: nếu bài không nói thì trả lời là không có.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Gao và cộng sự: Retrieval-Augmented Generation for LLMs, A Survey",
+    "url": "https://arxiv.org/abs/2312.10997"
+   }
+  ],
+  "module": 3
+ },
+ "p20": {
+  "example": "Viết biên bản cần nhất quán nên chọn greedy hoặc temperature thấp. Viết slogan sáng tạo thì lấy mẫu với temperature cao hơn để có nhiều lựa chọn.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Zhao và cộng sự: A Survey of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.18223"
+   }
+  ],
+  "module": 3
+ },
+ "p21": {
+  "example": "Tóm tắt một báo cáo dài là đầu vào dài, đầu ra ngắn. Viết truyện dài từ vài từ khoá là đầu vào ngắn, đầu ra dài.",
+  "links": [
+   {
+    "title": "Xiao và Zhu: Foundations of Large Language Models (CC BY-NC 4.0)",
+    "url": "https://arxiv.org/abs/2501.09223"
+   },
+   {
+    "title": "Zhao và cộng sự: A Survey of Large Language Models",
+    "url": "https://arxiv.org/abs/2303.18223"
+   }
+  ],
+  "module": 3
+ }
+}

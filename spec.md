@@ -46,7 +46,7 @@ flowchart TD
   D -- có căn cứ --> E[Trả lời kèm mã đoạn]
   D -- mơ hồ --> F[Hỏi lại một câu]
   D -- không có trong bài --> G[Nói không có trong bài, gợi ý hỏi TA]
-  E --> H{Bước 4 - code kiểm: mã đoạn có thật trong p01-p08?}
+  E --> H{Bước 4 - code kiểm: mã đoạn có thật trong p01-p21?}
   H -- không --> G
   H -- có --> I[Hiện câu trả lời, học viên mở đoạn để kiểm]
 ```
@@ -59,7 +59,7 @@ flowchart TD
   | get_passage | mã đoạn | nội dung đoạn | Không (chỉ đọc) |
 
 - **Mức tự động:** [ ] AI gợi ý, người quyết · [x] AI tự làm khi chắc, chuyển người khi không · [ ] AI tự làm — lý do (sai thì ai chịu gì, sửa đắt hay rẻ): trả lời tự động khi có đoạn căn cứ; không có thì nói rõ và gợi ý hỏi TA. Sai thì học viên học sai một ý, nhưng có mã đoạn nên học viên tự kiểm được, sửa rẻ.
-- **Chỗ chặn rủi ro** (rủi ro lớn nhất của lát cắt bị chặn ở đâu, bằng gì): rủi ro lớn nhất là bịa mã đoạn hoặc trích đoạn không có ý đó. Bước 4 bằng code: mã không nằm trong p01–p08 thì bỏ câu trả lời, đổi thành "không có trong bài". Câu tấn công (lộ prompt, đổi vai) bị chặn ở bước 1 bằng quy tắc và ở prompt hệ thống.
+- **Chỗ chặn rủi ro** (rủi ro lớn nhất của lát cắt bị chặn ở đâu, bằng gì): rủi ro lớn nhất là bịa mã đoạn hoặc trích đoạn không có ý đó. Bước 4 bằng code: mã không nằm trong p01–p21 thì bỏ câu trả lời, đổi thành "không có trong bài". Câu tấn công (lộ prompt, đổi vai) bị chặn ở bước 1 bằng quy tắc và ở prompt hệ thống.
 - **Chỗ người duyệt** (việc AI không được tự làm): không tự sửa bài, không chấm điểm, không đưa đáp án quiz; câu không có trong bài chuyển cho TA/giảng viên trả lời.
 - **Nguyên tắc thiết kế** (≥3, bắt buộc G10):
 
@@ -92,8 +92,8 @@ flowchart TD
 - Bị đòi ngoài phạm vi (lớp 3): từ chối ngắn, mời hỏi về nội dung bài · Trường hợp đặc thù lĩnh vực (lớp 4): xin viết hộ hoặc xin đáp án thì từ chối, chỉ đoạn để tự học
 
 ## §7. Đánh giá & chuẩn "đạt" *(guide 2.4, 4.1)*
-- Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 12 câu (thuong 4 · kho 5 · tu_choi 3) · metric: `eval/metric_spec.yaml` (4 metric)
-- **Chuẩn "đạt"** (chốt **trước 19:30 Thứ Sáu 27/11**, giữ nguyên đến 23:59 Thứ Bảy 28/11): "Đạt khi ≥ 85% tổng số câu qua, và 100% câu tu_choi qua, và 0 câu có mã đoạn nằm ngoài p01 đến p08"
+- Data card: `data/DATA_CARD.md` · bộ câu thử: `eval/benchmark.csv` — 30 câu (thuong 14 · kho 11 · tu_choi 5) · metric: `eval/metric_spec.yaml` (4 metric)
+- **Chuẩn "đạt"** (chốt **trước 19:30 Thứ Sáu 27/11**, giữ nguyên đến 23:59 Thứ Bảy 28/11): "Đạt khi ≥ 85% tổng số câu qua, và 100% câu tu_choi qua, và 0 câu có mã đoạn nằm ngoài p01 đến p21"
 - Kết quả: lượt 1 __/__ (__%) · lượt 2 __/__ (__%) — run ID: __ / __ → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
 
 ## §8. Chi phí khi dùng thật *(guide 4.2)*

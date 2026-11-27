@@ -1,7 +1,7 @@
 """Công cụ của bài toán (nhóm Fightingggg): tra bài mẫu có mã đoạn.
 
 Mỗi công cụ: tên · input · output · có tác động ra ngoài không (khớp spec.md §4).
-Dữ liệu đọc: data/lesson_sample.md (bài mẫu 8 đoạn p01 đến p08, nhóm tự viết, xem data/DATA_CARD.md).
+Dữ liệu đọc: data/lesson_sample.md (bài mẫu 21 đoạn p01 đến p21, nhóm tự viết, xem data/DATA_CARD.md).
 """
 import os
 import re

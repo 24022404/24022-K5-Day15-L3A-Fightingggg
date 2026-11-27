@@ -1,0 +1,203 @@
+[
+ {
+  "id": "q1",
+  "title": "Quiz 1 · Nền tảng LLM",
+  "desc": "Các trang 01 đến 08. 5 câu trắc nghiệm, chọn hết rồi bấm Nộp bài.",
+  "questions": [
+   {
+    "q": "Theo bài, LLM được huấn luyện để làm việc cơ bản nào?",
+    "options": [
+     "Tra cứu sự thật trong một cơ sở dữ liệu",
+     "Dự đoán phần chữ tiếp theo",
+     "Dịch mọi ngôn ngữ ngay lập tức",
+     "Lưu lại mọi cuộc trò chuyện"
+    ],
+    "answer": 1,
+    "code": "p01",
+    "explain": "LLM được huấn luyện trên lượng văn bản rất lớn để dự đoán phần chữ tiếp theo."
+   },
+   {
+    "q": "Giới hạn và chi phí khi gọi mô hình thường được tính theo đơn vị nào?",
+    "options": [
+     "Số từ",
+     "Số ký tự",
+     "Token",
+     "Số câu"
+    ],
+    "answer": 2,
+    "code": "p02",
+    "explain": "Giới hạn và chi phí đều tính theo token, nên cùng một nội dung viết dài hơn thì tốn nhiều hơn."
+   },
+   {
+    "q": "Cửa sổ ngữ cảnh bao gồm những phần nào?",
+    "options": [
+     "Chỉ phần đầu vào",
+     "Chỉ phần trả lời",
+     "Cả phần đầu vào và phần trả lời",
+     "Chỉ prompt hệ thống"
+    ],
+    "answer": 2,
+    "code": "p03",
+    "explain": "Cửa sổ ngữ cảnh là số token tối đa mô hình nhìn thấy trong một lần gọi, tính cả đầu vào và phần trả lời."
+   },
+   {
+    "q": "Cách nào giúp giảm việc mô hình nói bịa, theo bài?",
+    "options": [
+     "Tăng temperature",
+     "Đưa tài liệu nguồn, yêu cầu trích đoạn đã dùng và cho phép nói không có trong tài liệu",
+     "Cấm người dùng hỏi lại",
+     "Rút ngắn câu hỏi"
+    ],
+    "answer": 1,
+    "code": "p05",
+    "explain": "Mô hình dự đoán chữ chứ không tra cứu sự thật, nên cần tài liệu nguồn, trích dẫn và cho phép nói không có."
+   },
+   {
+    "q": "Chất lượng câu trả lời của RAG phụ thuộc nhiều nhất vào bước nào?",
+    "options": [
+     "Bước tìm đoạn liên quan",
+     "Độ dài của prompt",
+     "Số lần người dùng hỏi",
+     "Màu sắc giao diện"
+    ],
+    "answer": 0,
+    "code": "p07",
+    "explain": "Tìm sai đoạn thì mô hình trả lời sai dù viết rất trôi chảy."
+   }
+  ]
+ },
+ {
+  "id": "q2",
+  "title": "Quiz 2 · Huấn luyện và căn chỉnh",
+  "desc": "Các trang 09 đến 15. 5 câu trắc nghiệm, chọn hết rồi bấm Nộp bài.",
+  "questions": [
+   {
+    "q": "Khi huấn luyện mô hình ngôn ngữ, người ta tối đa hoá đại lượng nào?",
+    "options": [
+     "Số tham số của mô hình",
+     "Log-likelihood của các chuỗi trong dữ liệu",
+     "Độ dài trung bình của câu",
+     "Số GPU sử dụng"
+    ],
+    "answer": 1,
+    "code": "p09",
+    "explain": "Chỉnh tham số để xác suất của các chuỗi trong dữ liệu càng cao càng tốt, bằng gradient descent."
+   },
+   {
+    "q": "Khi tính loss lúc tinh chỉnh theo chỉ dẫn, phần nào được tính?",
+    "options": [
+     "Chỉ phần chỉ dẫn",
+     "Cả chỉ dẫn lẫn câu trả lời như nhau",
+     "Chỉ phần câu trả lời",
+     "Không tính phần nào"
+    ],
+    "answer": 2,
+    "code": "p12",
+    "explain": "Chỉ phần câu trả lời được tính loss, phần chỉ dẫn thì không."
+   },
+   {
+    "q": "Căn chỉnh (alignment) nhằm mục đích gì?",
+    "options": [
+     "Làm mô hình chạy nhanh hơn",
+     "Dẫn dắt mô hình hành xử đúng với giá trị và mục tiêu của con người",
+     "Tăng số tham số",
+     "Giảm kích thước dữ liệu"
+    ],
+    "answer": 1,
+    "code": "p13",
+    "explain": "Mô hình cần làm theo chỉ dẫn, trung thực, không thiên lệch và không gây hại."
+   },
+   {
+    "q": "Bước nào KHÔNG thuộc bốn bước của RLHF?",
+    "options": [
+     "Người đánh giá hoặc xếp hạng các câu trả lời",
+     "Học mô hình phần thưởng",
+     "Tinh chỉnh bằng học tăng cường",
+     "Dịch toàn bộ dữ liệu sang ngôn ngữ khác"
+    ],
+    "answer": 3,
+    "code": "p14",
+    "explain": "Bốn bước: mô hình khởi đầu, người xếp hạng, học mô hình phần thưởng, tinh chỉnh bằng học tăng cường."
+   },
+   {
+    "q": "Điểm khác chính giữa RAG chuẩn và fine-tuning là gì?",
+    "options": [
+     "RAG chuẩn không cần huấn luyện, fine-tuning cần công sức huấn luyện",
+     "RAG luôn cần huấn luyện lại",
+     "Fine-tuning không dùng dữ liệu",
+     "Hai cách giống hệt nhau"
+    ],
+    "answer": 0,
+    "code": "p15",
+    "explain": "RAG chuẩn dùng ngay với mô hình có sẵn; fine-tuning cần huấn luyện. Hai cách cũng có thể kết hợp."
+   }
+  ]
+ },
+ {
+  "id": "q3",
+  "title": "Quiz 3 · Prompt, RAG và giải mã",
+  "desc": "Các trang 16 đến 21. 5 câu trắc nghiệm, chọn hết rồi bấm Nộp bài.",
+  "questions": [
+   {
+    "q": "Zero-shot là cách prompt như thế nào?",
+    "options": [
+     "Không đưa ví dụ nào, chỉ mô tả việc cần làm",
+     "Đưa một ví dụ",
+     "Đưa vài ví dụ",
+     "Đổi tham số mô hình"
+    ],
+    "answer": 0,
+    "code": "p17",
+    "explain": "Zero-shot không có ví dụ; one-shot có một ví dụ; few-shot có vài ví dụ. Học trong ngữ cảnh không đổi tham số nào."
+   },
+   {
+    "q": "Chain of thought (chuỗi suy luận) yêu cầu mô hình làm gì?",
+    "options": [
+     "Trả lời thật ngắn",
+     "Viết ra từng bước lập luận trước khi kết luận",
+     "Bỏ qua ví dụ",
+     "Tăng temperature"
+    ],
+    "answer": 1,
+    "code": "p18",
+    "explain": "Mô hình viết từng bước, nên dễ kiểm tra và dễ tin hơn."
+   },
+   {
+    "q": "Trong prompt RAG, nên dặn mô hình thế nào khi thông tin được cung cấp không đủ?",
+    "options": [
+     "Tự bịa cho đầy đủ",
+     "Chỉ trả lời bằng một chữ",
+     "Nói là không trả lời được",
+     "Gọi lại hệ thống truy xuất"
+    ],
+    "answer": 2,
+    "code": "p19",
+    "explain": "Truy xuất có thể đưa lên văn bản sai hoặc không liên quan, nên cần dặn mô hình nói không đủ thông tin."
+   },
+   {
+    "q": "Greedy search chọn gì ở mỗi bước sinh?",
+    "options": [
+     "Token ngẫu nhiên",
+     "K chuỗi tốt nhất",
+     "Token có xác suất thấp nhất",
+     "Token có xác suất cao nhất"
+    ],
+    "answer": 3,
+    "code": "p20",
+    "explain": "Greedy chọn token xác suất cao nhất; beam search mới giữ K chuỗi tốt nhất."
+   },
+   {
+    "q": "Tóm tắt một tài liệu rất dài thuộc dạng bài toán chuỗi dài nào?",
+    "options": [
+     "Đầu vào dài, đầu ra ngắn",
+     "Đầu vào ngắn, đầu ra dài",
+     "Cả hai cùng dài",
+     "Không phải bài toán chuỗi dài"
+    ],
+    "answer": 0,
+    "code": "p21",
+    "explain": "Tóm tắt tài liệu dài là đầu vào dài; viết truyện dài từ vài từ khoá là đầu ra dài."
+   }
+  ]
+ }
+]

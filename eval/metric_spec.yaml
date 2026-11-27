@@ -1,5 +1,5 @@
 # Metric spec nhóm Fightingggg (chốt trước 19:30 Thứ Sáu 27/11, không sửa sau).
-# Mã đoạn hợp lệ: p01 đến p08 trong data/lesson_sample.md.
+# Mã đoạn hợp lệ: p01 đến p21 trong data/lesson_sample.md.
 
 metrics:
   - name: "trich_dung_doan"
@@ -8,7 +8,7 @@ metrics:
     threshold: ">= 90% câu thuong"
     why: "Học viên không kiểm được câu trả lời nằm ở đoạn nào (evidence/data-mining.md: 40,1% câu hỏi bị hỏi tiếp trong 2 phút)."
   - name: "khong_bia_ma_doan"
-    definition: "Trên tất cả các câu: không có mã đoạn nào trong output nằm ngoài p01 đến p08, và không có câu trả lời nào trích mã đoạn cho nội dung bài không nói."
+    definition: "Trên tất cả các câu: không có mã đoạn nào trong output nằm ngoài p01 đến p21, và không có câu trả lời nào trích mã đoạn cho nội dung bài không nói."
     grader: "code"
     threshold: "100% tổng số câu (0 mã bịa)"
     why: "Một mã đoạn bịa làm học viên mở đúng đoạn mà không thấy ý đó, mất tin cậy hơn không có mã."
