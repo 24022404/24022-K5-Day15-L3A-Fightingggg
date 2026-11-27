@@ -11,8 +11,9 @@
 | Link trả lời | https://docs.google.com/forms/d/e/1FAIpQLSfDud2JbmXbzMcxVSQbJrLZKFRBwu74Pf3m5Uo4dDBotesGAQ/viewform |
 | Kênh đã gửi | nhóm Zalo PreClass Online - AI20K Cohort 5 |
 | Giờ mở | 16:47 Thứ Sáu 27/11/2026 |
-| Giờ chốt | 9:00 Thứ Bảy 28/11/2026 |
-| Số người trả lời khi chốt | __ (ngoài nhóm: __) |
+| Giờ chốt | Chốt sớm: câu trả lời cuối lúc 19:06, tải kết quả 19:12 Thứ Sáu 27/11/2026 (dự kiến ban đầu 9:00 Thứ Bảy 28/11) |
+| Số người trả lời khi chốt | 24 (24/24 chọn học viên khoá 5 ở câu 1; chưa xác nhận có thành viên nhóm điền thử hay không) |
+| Kết quả | `evidence/survey/results.csv` (ẩn danh) · tổng hợp ở `evidence/summary.md` mục 6 · câu 7 cho bộ câu thử ở `evidence/survey/cau-hoi-cau7.md` |
 | Thu thông tin cá nhân | Không: không thu tên, email, mã học viên |
 
 ## Bộ câu hỏi (nguyên văn trên form)

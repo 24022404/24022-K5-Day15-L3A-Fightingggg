@@ -117,6 +117,7 @@ flowchart TD
 | Thời điểm | Đổi gì | Vì sao (trỏ về câu thử / lỗi / bằng chứng nào) |
 |---|---|---|
 | 17:16 Thứ Sáu 27/11 | Đổi nguồn kiểm lại bằng chứng pain từ phỏng vấn ≥3 người sang khảo sát Google Form ≥20 học viên khoá 5 (`evidence/survey/questions.md`); viết `evidence/hypothesis.md`; sửa canvas dòng 4, 7, spec §1, TEAMS.md theo | Khảo sát hỏi được nhiều người hơn trong thời gian còn lại trước CP3; câu 7 của form cho câu thử `nguoi_dung`. Dưới 20 người lúc 7:30 Thứ Bảy 28/11 thì phỏng vấn nhanh 3 người làm dự phòng |
+| 19:15 Thứ Sáu 27/11 | Thêm kết quả khảo sát 24 học viên khoá 5 (`evidence/summary.md` mục 6, `evidence/survey/results.csv`); chốt form sớm vì đã vượt 20 người; cập nhật canvas dòng 4 | Hai tiêu chí đặt trước ở `evidence/hypothesis.md` đều đạt nhưng sát ngưỡng (12/23 = 52,2% và 11/23 = 47,8%); phàn nàn chính là câu trả lời không đúng trọng tâm, rộng hơn giả thuyết ban đầu |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)** (sửa theo góp ý — không sửa chuẩn "đạt", câu thử, số bằng chứng, kết quả các lượt đã chạy)
 
