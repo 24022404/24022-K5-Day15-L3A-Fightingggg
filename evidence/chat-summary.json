@@ -1,0 +1,163 @@
+{
+  "source_file": "chat.csv",
+  "source_sha256": "3331daa0356c1c1863e8b0dd8e74581071d425d9d956e24a98b6f0f2166d304c",
+  "source_kinds": {
+    "mention": 18,
+    "question": 1091,
+    "reply": 151
+  },
+  "filter": {
+    "kind": "question",
+    "agent_id": "teaching_assistant"
+  },
+  "total_rows": 1260,
+  "questions": 1091,
+  "learners": 143,
+  "channels": {
+    "session_question": 1,
+    "video_question": 1090
+  },
+  "period": {
+    "from": "2026-11-05",
+    "to": "2026-11-25"
+  },
+  "short_questions": {
+    "count": 70,
+    "percent": 6.416131989000917
+  },
+  "fast_responses": {
+    "count": 26,
+    "percent": 2.383134738771769,
+    "questions_at_most_15_chars": 26,
+    "common_answer_lengths": [
+      {
+        "length": 171,
+        "count": 11
+      },
+      {
+        "length": 138,
+        "count": 6
+      },
+      {
+        "length": 40,
+        "count": 3
+      }
+    ]
+  },
+  "followups": {
+    "count": 438,
+    "percent": 40.14665444546288,
+    "learners": 91,
+    "eligible_questions": 1090
+  },
+  "video_only": {
+    "questions": 1090,
+    "learners": 143,
+    "short_questions": 70,
+    "fast_responses": 26,
+    "followups": 438,
+    "followup_percent": 40.18348623853211
+  },
+  "data_quality": {
+    "missing_video_count": 1,
+    "missing_video_ids": [
+      "C00189"
+    ],
+    "video_questions_missing_transcript": 0
+  },
+  "fast_response_examples": [
+    {
+      "id": "C01056",
+      "question_length": 2,
+      "answer_length": 171,
+      "latency_s": 0.018206
+    },
+    {
+      "id": "C01149",
+      "question_length": 2,
+      "answer_length": 171,
+      "latency_s": 0.018925
+    },
+    {
+      "id": "C00724",
+      "question_length": 2,
+      "answer_length": 138,
+      "latency_s": 0.018961
+    },
+    {
+      "id": "C01182",
+      "question_length": 2,
+      "answer_length": 67,
+      "latency_s": 0.019552
+    },
+    {
+      "id": "C00344",
+      "question_length": 2,
+      "answer_length": 40,
+      "latency_s": 0.021807
+    },
+    {
+      "id": "C00920",
+      "question_length": 2,
+      "answer_length": 171,
+      "latency_s": 0.028518
+    },
+    {
+      "id": "C00910",
+      "question_length": 2,
+      "answer_length": 171,
+      "latency_s": 0.035098
+    },
+    {
+      "id": "C00252",
+      "question_length": 2,
+      "answer_length": 137,
+      "latency_s": 0.040945
+    }
+  ],
+  "followup_examples": [
+    {
+      "previous_id": "C00581",
+      "current_id": "C00499",
+      "gap_s": 69.076788
+    },
+    {
+      "previous_id": "C00499",
+      "current_id": "C01138",
+      "gap_s": 64.658684
+    },
+    {
+      "previous_id": "C01138",
+      "current_id": "C01085",
+      "gap_s": 43.429216
+    },
+    {
+      "previous_id": "C01122",
+      "current_id": "C00937",
+      "gap_s": 55.85924
+    },
+    {
+      "previous_id": "C00216",
+      "current_id": "C00775",
+      "gap_s": 29.727245
+    },
+    {
+      "previous_id": "C00775",
+      "current_id": "C00796",
+      "gap_s": 21.923336
+    },
+    {
+      "previous_id": "C01000",
+      "current_id": "C00036",
+      "gap_s": 10.745034
+    },
+    {
+      "previous_id": "C00036",
+      "current_id": "C00511",
+      "gap_s": 60.670761
+    }
+  ],
+  "source_path": "data/preclass/chat.csv",
+  "verified_at": "2026-11-27T17:17:25+07:00",
+  "verification_note": "Independent PowerShell check: scripts/verify_chat.ps1. Human review is not represented by automated checks."
+}

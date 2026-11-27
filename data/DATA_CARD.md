@@ -6,11 +6,13 @@
 |---|---|
 | Dùng để làm gì | Đào bằng chứng pain (`evidence/data-mining.md`). Không dùng để chạy thử và không đưa vào model. |
 | Từ đâu | Data BTC cấp, `data/preclass/chat.csv` trong repo đề (đã ẩn danh, mã học viên đã thay) |
-| Xử lý những bước gì | Lọc `kind = question` và `agent_id = teaching_assistant`; tính độ dài câu hỏi, thời gian trả lời, khoảng cách giữa hai câu hỏi cùng học viên cùng video (script: `scripts/mine_chat.py`) |
-| Số dòng / số đoạn | 1.260 dòng gốc; 1.091 câu hỏi sau lọc, 143 học viên |
+| Xử lý những bước gì | Kiểm dữ liệu và lọc `kind = question`, `agent_id = teaching_assistant`; đếm độ dài nguồn và thời gian phản hồi trên tập chính; phép hỏi tiếp chỉ nhóm `video_question` có mã video theo học viên/video (script: `scripts/mine_chat.py`) |
+| Số dòng / số đoạn | 1.260 dòng gốc; 1.091 câu hỏi sau lọc từ 143 học viên, gồm 1.090 `video_question` và 1 `session_question` |
 | Phiên bản / ngày lấy | Nhật ký 05/11 đến 25/11/2026, lấy ngày 27/11/2026 |
 | Nhãn | thật |
 | Giới hạn | Chỉ có độ dài, không có nội dung câu hỏi hay trả lời; chỉ cho biết học viên làm gì, không cho biết vì sao. Repo nhóm chỉ chứa số tổng hợp và mã dòng ví dụ, không chép lại file. |
+
+**Đối chiếu nguồn ngày 27/11/2026:** file cục bộ `data/preclass/chat.csv` có 260.259 byte, SHA-256 `3331daa0356c1c1863e8b0dd8e74581071d425d9d956e24a98b6f0f2166d304c`. Hai phép đếm độc lập Python/PowerShell xác nhận các số trên. `C00189` thuộc kênh phiên học và không có `transcript`; không tự coi đây là một câu hỏi dưới video mất mã. Dòng này ở mẫu số chính 1.091, không vào nhóm cùng video; cả 1.090 câu kênh video đều có mã. C = 438/1.091 (40,1%) trên tập chính, hoặc 438/1.090 (40,2%) khi chỉ xét kênh video. File nguồn được Git bỏ qua, không đưa nguyên file vào bản nộp. Xem `evidence/verification.md`; kiểm bằng công cụ không thay cho xác nhận người trong nhóm đã rà.
 
 ## Dataset 2 · Bài mẫu (`data/lesson_sample.md`)
 

@@ -1,0 +1,17 @@
+{
+  "source_sha256": "3331daa0356c1c1863e8b0dd8e74581071d425d9d956e24a98b6f0f2166d304c",
+  "total_rows": 1260,
+  "questions": 1091,
+  "learners": 143,
+  "channels": {
+    "session_question": 1,
+    "video_question": 1090
+  },
+  "short_questions": 70,
+  "fast_responses": 26,
+  "followups": 438,
+  "followup_learners": 91,
+  "video_questions": 1090,
+  "verified_report_examples": 8,
+  "verified_report_pairs": 5
+}

@@ -8,14 +8,14 @@ Data BTC cấp đã dùng (nếu có — không commit nguyên file): `data/prec
 
 ## §0. Hiện tại việc này diễn ra thế nào *(guide 1.1)*
 - Luồng hiện tại của việc này, trong khoá hoặc trên app thật (3–5 bước; ảnh chụp từ tài khoản của mình, đã che thông tin): (1) học viên mở video bài trên trang pre-class → (2) gặp chỗ chưa hiểu, gõ câu hỏi vào khung hỏi trợ giảng dưới video → (3) nhận câu trả lời dạng chữ → (4) tự quyết tin hay hỏi tiếp. *(ảnh chụp: chưa có, bổ sung)*
-- Công cụ / AI đang được dùng cho việc này (nếu có) + nguồn. Không kiểm được thì ghi "chưa kiểm": trợ giảng dưới video đã chạy thật (`chat.csv`: 1.091 câu hỏi từ 143 học viên, 05/11 đến 25/11/2026). Cách nó chọn đoạn căn cứ và có trích mã đoạn hay không: chưa kiểm (data chỉ có độ dài, không có nội dung).
+- Công cụ / AI đang được dùng cho việc này (nếu có) + nguồn. Không kiểm được thì ghi "chưa kiểm": nhật ký `chat.csv` ghi 1.091 câu hỏi gửi trợ giảng từ 143 học viên trong 05/11–25/11/2026, gồm 1.090 câu kênh video và 1 câu kênh phiên học. Cách trợ giảng chọn đoạn căn cứ và có trích mã đoạn hay không: chưa kiểm (nguồn không có nội dung hỏi/đáp).
 
 ## §1. Người dùng & bằng chứng *(guide 1.1, 1.2)*
 - Người dùng chính (một vai cụ thể): học viên AI20K khoá 5 tự học bài trước giờ lên lớp trên trang pre-class.
 - Việc họ cố làm xong (`động từ + đối tượng + bối cảnh`, không có chữ AI): hiểu đúng một ý chưa rõ trong bài trước giờ lên lớp và tự kiểm được là hiểu đúng.
-- Hôm nay họ giải bằng gì, hỏng ở đâu, vì sao chưa bỏ: hỏi trợ giảng dưới video. Hỏng ở đâu: giả thuyết là câu trả lời khó kiểm vì không chỉ rõ đoạn căn cứ (chưa kiểm, đang kiểm bằng khảo sát ≥20 học viên khoá 5: `evidence/survey/questions.md`, giả thuyết ở `evidence/hypothesis.md`). Vì sao chưa bỏ: chưa có cách khác ngay trong trang.
-- Pain (KHÔNG chữ AI): học viên đang xem bài trước giờ lên lớp — hỏi một ý chưa rõ — không biết câu trả lời dựa vào đoạn nào của bài, nên hỏi lặp lại hoặc phải tin mà không kiểm — mất thời gian và có thể mang hiểu sai vào buổi học.
-- Bằng chứng — số chính + kết luận (chi tiết: `evidence/data-mining.md`): 438/1.091 câu hỏi (40,1%, từ 91/143 học viên) là hỏi tiếp trong ≤120 giây cùng video; 70/1.091 (6,4%) câu ≤10 ký tự; 26/1.091 (2,4%) trả lời tức thì (<0,5 giây). Kết luận tạm: có tín hiệu hỏi lặp và câu quá ngắn; **chưa đủ kết luận** vì data không có nội dung, cần khảo sát để xác nhận (form mở 16:47 Thứ Sáu 27/11, chốt 9:00 Thứ Bảy 28/11).
+- Hôm nay họ giải bằng gì, hỏng ở đâu, vì sao chưa bỏ: nhật ký có câu hỏi gửi trợ giảng. Khó kiểm câu trả lời vì thiếu đoạn căn cứ và lý do học viên tiếp tục dùng cách này là các điểm chưa xác minh; Phương đang kiểm bằng khảo sát ≥20 học viên khoá 5, theo `evidence/survey/questions.md` và tiêu chí ở `evidence/hypothesis.md`; chưa có kết quả khảo sát trong repo.
+- Pain (KHÔNG chữ AI) — **giả thuyết nhóm đang kiểm**: học viên tự học pre-class có thể khó kiểm câu trả lời dựa vào đoạn nào, phải dò lại tài liệu hoặc hỏi thêm; thời gian mất và hệ quả hiểu sai chưa được nhật ký này đo.
+- Bằng chứng — số chính + kết luận (chi tiết: `evidence/data-mining.md`): trên tập 1.091 câu hỏi gửi trợ giảng, 70 câu dài ≤10 ký tự (6,4%), 26 phản hồi dưới 0,5 giây (2,4%), 438 lượt hỏi tiếp trong ≤120 giây cùng học viên/video (40,1%), xuất hiện ở 91/143 học viên. Riêng 1.090 câu kênh video, tỷ lệ C là 438/1.090 = 40,2%. **Đã xác minh các hành vi này; chưa chứng minh hỏi lại cùng ý, thiếu trích dẫn hoặc nguyên nhân mất thời gian.** Khảo sát mở 16:47 ngày 27/11, chốt 9:00 ngày 28/11 theo hồ sơ của Phương.
 
 ## §2. Impact & quyết định chọn *(guide 1.3)*
 
