@@ -1,6 +1,3 @@
-> Đây là khung repo nộp bài. Điền mọi chỗ `____`, giữ nguyên tên các mục. **Mục 0 xoá đi sau khi tạo repo xong.**
-> Giờ, mốc, luật, rubric: xem `README.md`, `02-guide.md`, `03-rubric.md` trong repo đề (bộ đề BTC phát).
-
 # Fightingggg — Trợ giảng trả lời có mã đoạn (A1, track A EdTech)
 
 **Bản chạy thật:** https://ai20k-lms.onrender.com/ — đăng nhập tài khoản thử `hocvien` / `ai20k2026`, mở một bài học hoặc bài trắc nghiệm rồi hỏi trợ giảng ở khung chat bên phải. Bản miễn phí của Render ngủ sau 15 phút không dùng, lần mở đầu có thể chờ khoảng một phút.
@@ -88,12 +85,16 @@ Nhóm dùng stack khác (Node, Streamlit, notebook…): sửa hàm `run_app()` t
 |---|---|---|
 | Lời gọi AI ở quyết định trung tâm | **Thật** (bắt buộc từ CP3) | Model: `gemini-3.1-flash-lite` (gọi qua `codebase/ai.py`) |
 | Công cụ `search_lesson` (tìm đoạn theo từ khoá, chọn 4 đoạn) | **Thật** | Đọc `data/lesson_sample.md` (21 đoạn); tìm theo từ khoá, chưa dùng embedding |
+| Bài học trợ giảng dựa vào | **Giả** (`synthetic`) | 21 đoạn nhóm tự viết, thay cho lời giảng thật của video; chưa có người kiểm tay (`data/DATA_CARD.md`) |
+| Bằng chứng pain | **Thật** | Nhật ký `chat.csv` của BTC (số tổng hợp) và khảo sát 24 học viên khoá 5 (`evidence/summary.md`) |
+| Bộ câu thử | 11/30 **thật**, 19/30 tự viết | 11 câu chép nguyên văn từ câu 7 của khảo sát (`eval/benchmark.csv`, cột `source`) |
+| Đăng nhập web demo | **Giả** | Mật khẩu dùng chung `hocvien` / `ai20k2026`, không phải xác thực thật |
 
 ## Dùng AI vào việc gì
 
 2–3 dòng (bắt buộc): nhóm dùng công cụ AI nào để làm gì, người kiểm lại phần nào. Chi tiết: [docs/ai-usage.md](docs/ai-usage.md). Coding agent đọc [AGENTS.md](AGENTS.md).
 
-Claude (Anthropic) giúp viết giao diện web, mã `codebase/`, một phần `expected` và `pass_criterion` cho câu thử, và nháp cột `pass` ở `run-3`, `run-4`; Codex giúp đào số liệu chat và soạn tài liệu bằng chứng. Người trong nhóm đọc lại mọi kết quả `eval`, và một người không viết spec chấm độc lập 5 câu. Chi tiết: `docs/ai-usage.md`.
+Claude (Anthropic) giúp viết giao diện web, mã `codebase/`, một phần `expected` và `pass_criterion` cho câu thử, và nháp cột `pass` ở `run-3`, `run-4`; Codex giúp đào số liệu chat và soạn tài liệu bằng chứng; Claude Code giúp Phương soạn khảo sát, đếm kết quả, làm slide và chạy mô phỏng chi phí. Người trong nhóm đọc lại mọi kết quả `eval`, và một người không viết spec chấm độc lập 5 câu. Chi tiết: `docs/ai-usage.md`.
 
 ## File mẫu — điền ở bước nào
 
@@ -125,5 +126,5 @@ Claude (Anthropic) giúp viết giao diện web, mã `codebase/`, một phần `
 | 4 | Bản chạy thử làm trọn lát cắt | `codebase/` · lệnh ở mục "Lệnh" |
 | 5 | Định nghĩa "tốt" + bộ câu thử | `data/DATA_CARD.md` · `eval/` |
 | 6 | Mô phỏng chi phí khi dùng thật | `cost/` |
-| 7 | Slide + demo + video dự phòng | slide trong repo (PDF, PPTX, HTML…) hoặc link slide ở form CP4 · link video: ____ |
+| 7 | Slide + demo + video dự phòng | slide: [`slides/demo-slides.pptx`](slides/demo-slides.pptx) (bản PDF `demo-slides.pdf` xuất trước CP4) · link video: [`demo-video.mp4`](https://github.com/ducminhnwork/K5-Day15-L3A-Fightingggg/blob/main/demo-video.mp4) (39 giây, quay web demo ngày 27/11/2026: hỏi B13 "LLM là gì", B29 "SLO là gì?" và "ok") |
 | + | *Bonus:* người dùng thử | `validation/log.md` |

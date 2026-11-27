@@ -98,18 +98,18 @@ flowchart TD
 - Kết quả: lượt 1 26/30 (86,7%) · lượt 2 30/30 (100%) — run ID: run-3@20261127-211539 / run-4@20261127-212448 → chi tiết `eval/report.md`, hồ sơ `eval/README.md`
 
 ## §8. Chi phí khi dùng thật *(guide 4.2)*
-- Persona + giá: `cost/personas.yaml` · lượt mô phỏng: `cost/simulate-__.csv` (__ phiên)
-- Chi phí / task thành công: __ (model __) · __ (model __)
-- Chi phí / tháng ở quy mô thật: thấp __ · cơ sở __ · cao __ → chi tiết `cost/cost-estimate.md`
-- So với impact / người / tháng (§2): đáng làm không, vì sao:
+- Persona + giá: `cost/personas.yaml` (3 persona 25% / 50% / 25%, ≈9 / 13 / 24 lần hỏi mỗi tháng như §2, 2 lượt / phiên từ `chat.csv` *(tự ước tính)*; giá gói trả phí xem 27/11/2026) · lượt mô phỏng: `cost/simulate-1.csv` (50 phiên, seed 42; 48 phiên tính trung bình, 2 phiên lỗi timeout API) · tỉ lệ đạt lấy từ `run-4` (30/30)
+- Chi phí / task thành công: $0,00059 (model gemini-3.1-flash-lite) · $0,0017 (model gemini-3.8-flash) — một task = một phiên 2 câu hỏi; đo token trên gemini-3.1-flash-lite. Tỉ lệ đạt 100% là trên chính bộ câu đã dùng để sửa (`eval/report.md` mục 4); lấy lượt 1 (86,7%) thì cao hơn khoảng 15%.
+- Chi phí / tháng ở quy mô thật: thấp $0,62 (143 người) · cơ sở $3,03 (700 người) · cao $4,33 (1.000 người) với gemini-3.1-flash-lite; với gemini-3.8-flash: $1,75 · $8,59 · $12,27 → chi tiết `cost/cost-estimate.md`
+- So với impact / người / tháng (§2): chi phí $0,0043 / người / tháng (cơ sở, flash-lite), trong khi mỗi học viên đang bỏ ≈130 phút / tháng (≈13 lần × ≈10 phút, có ước tính) để hỏi và hiểu bài. **Đáng làm về mặt chi phí:** tiền model không phải rào cản. Điều chưa biết là trợ giảng có làm học viên đỡ mất thời gian thật hay không, vì khảo sát cho thấy phàn nàn chính là trả lời chung chung (11/23) chứ không chỉ thiếu căn cứ; cần đo trên học viên thật trước khi kết luận về giá trị.
 
 ## §9. Rủi ro & an toàn
-- Dữ liệu: đã ẩn danh gì, không thu gì, không đưa gì vào model gói miễn phí:
-- AI **không được** làm gì kể cả khi người dùng yêu cầu:
-- Ai có thể bị hại nếu AI sai, và nhóm chặn thế nào:
+- Dữ liệu: đã ẩn danh gì, không thu gì, không đưa gì vào model gói miễn phí: `chat.csv` của BTC (đã ẩn danh mã học viên) chỉ dùng để đếm số tổng hợp, không commit nguyên file (`.gitignore`: `data-btc`, thư mục nguồn) và **không đưa vào model**. Khảo sát không thu tên, email, mã học viên; bản nộp `evidence/survey/results.csv` đã bỏ cột thời gian và che 1 tên người thật (R14); bản gốc `raw-*` không commit. Model chỉ nhận câu hỏi của học viên và tối đa 4 đoạn của bài mẫu tự viết, không nhận thông tin cá nhân. Key API để trong `.env`, không commit. Tài khoản đăng nhập web demo (`hocvien` / `ai20k2026`) là mật khẩu dùng chung để thử, **không phải xác thực thật**.
+- AI **không được** làm gì kể cả khi người dùng yêu cầu: đưa đáp án quiz (đáp án chỉ chấm ở máy chủ, `data/quiz.json`, trả về sau khi nộp), viết hộ bài nộp, lộ prompt hệ thống hoặc đổi vai, trả lời bằng kiến thức ngoài bài như thể có trong bài, trích mã đoạn không có thật, chấm điểm hay sửa nội dung bài. Kiểm bằng câu thử `tu_choi` B10, B11, B12, B24, B25 (lượt 2: 5/5).
+- Ai có thể bị hại nếu AI sai, và nhóm chặn thế nào: **học viên** học sai một ý hoặc tin rằng bài không dạy ý đó (lượt 1, B17 nói "không có trong bài" dù p08 có). Chặn bằng: (1) bước 1 bằng code chặn câu quá ngắn và câu chèn chỉ dẫn; (2) bước 4 bằng code bỏ câu trả lời có mã ngoài p01–p21; (3) mọi câu trả lời kèm mã đoạn để học viên tự mở đoạn kiểm; (4) câu không có trong bài thì nói rõ và chuyển TA. **Khoá học / nhóm vận hành** có thể tốn hạn mức API nếu bị gọi dồn: máy chủ giới hạn 40 câu hỏi / IP / giờ (`server.py`). Rủi ro còn lại: tìm đoạn theo từ khoá có thể bỏ sót đoạn đúng; từ chối có thể chỉ đoạn không liên quan (`eval/report.md` mục 4).
 
 ## §10. Phân công & changelog
-- Phân công có tên (theo chặng, chia cặp — guide "Cách chia việc"): __
+- Phân công có tên (theo chặng, chia cặp — guide "Cách chia việc"): **Minh** — điều phối, bản chạy thử (`codebase/`, web `server.py` và `static/`, deploy Render), chạy eval lượt 1–2, viết `eval/report.md`, spec §2–§7 · **Sang** — đào số liệu `chat.csv`, `evidence/data-mining.md`, đối chiếu độc lập (`evidence/verification.md`) · **Phương** — giả thuyết và khảo sát 24 học viên (`evidence/hypothesis.md`, `evidence/survey/`, `evidence/summary.md` mục 6), canvas, slide, mô phỏng chi phí (`cost/`, spec §8–§9) · **Long** — bộ câu thử 30 câu (11 câu thật từ khảo sát), `data/DATA_CARD.md`, `eval/README.md`, người thứ hai chấm độc lập. Kiểm chéo đã làm: Long chấm độc lập 5 output của lượt 2 do Minh chấm, khớp 5/5 (`eval/cham-nguoi-thu-hai.md`).
 - Dùng AI vào việc gì (2–3 dòng; chi tiết `docs/ai-usage.md`): Claude (Anthropic) giúp viết giao diện web và mã `codebase/`, soạn `expected` và `pass_criterion` cho 11 câu thật, và nháp cột `pass` cho `run-3`, `run-4`. Người trong nhóm chạy `eval`, kiểm lại cột `pass`, và người thứ hai chấm độc lập 5 câu (`eval/README.md` mục 3).
 - Nhật ký thay đổi — **mọi thay đổi sau CP2 19:30 Thứ Sáu 27/11 phải có dòng ở đây**:
 
@@ -122,6 +122,7 @@ flowchart TD
 | 21:05 Thứ Sáu 27/11 | Thay 11 câu tự viết (B03, B05, B09, B13, B14, B18, B19, B20, B21, B22, B29) bằng 11 câu thật của học viên từ khảo sát, giữ 30 câu; sửa dòng đếm câu ở §7 từ "thuong 14 · kho 11 · tu_choi 5" thành "thuong 12 · kho 13 · tu_choi 5". Không đổi chuẩn "đạt". | Cần ≥1/3 câu từ người dùng (trước đó 0/30) và CP3 chỉ cho 20–30 câu nên không thêm được, chỉ thay (`data/DATA_CARD.md` bản 3, `eval/README.md` mục 2). Lượt chạy thử `run-1` (18:38) dùng bộ cũ nên không tính. |
 | 21:15 Thứ Sáu 27/11 | Tăng thời gian chờ gọi model từ 60 lên 120 giây (`codebase/ai.py`). | `run-1` và `run-2` có 4 câu bị timeout (B26, B27; B13, B24), là lỗi kỹ thuật, không phải lỗi câu hỏi. `run-3` chạy sạch 30/30 câu. |
 | 21:24 Thứ Sáu 27/11 | Cải tiến trước lượt 2: bước tìm đoạn lấy 4 đoạn thay vì 3, thêm từ gợi ý và trọng số từ hiếm (`codebase/tools.py`); prompt từ chối yêu cầu kèm mã đoạn để tự đọc, và bước 4 chỉ cả bài nếu không có mã hợp lệ (`codebase/agent.py`). | Lượt 1 (`run-3`) trượt B12, B25 (từ chối không chỉ đoạn) và B17, B23 (tìm sót đoạn); xem `eval/report.md` mục 2 và 3. Kết quả lượt 2 (`run-4`) 30/30, nhưng bản sửa viết sau khi thấy lỗi trên chính bộ câu này. |
+| 22:28 Thứ Sáu 27/11 | Điền `cost/personas.yaml` bằng số có nguồn (khảo sát câu 6, `chat.csv`, giá Gemini xem 27/11), chạy `python run.py simulate --rate-from eval/run-4.csv` → `cost/simulate-1.csv`; điền `cost/cost-estimate.md` và §8 | Guide 4.2: chi phí phải từ token đo thật; persona dùng đúng số lần hỏi / tháng ở §2 |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)** (sửa theo góp ý — không sửa chuẩn "đạt", câu thử, số bằng chứng, kết quả các lượt đã chạy)
 

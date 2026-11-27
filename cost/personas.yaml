@@ -3,49 +3,47 @@
 # Mọi số phải có nguồn (data / phỏng vấn / khảo sát / quy mô khoá có nguồn) hoặc ghi rõ "(tự ước tính)".
 # Chạy: python run.py simulate --try   (10 phiên, kiểm khung — làm trước CP3)
 #       python run.py simulate         (đủ số phiên dưới đây — bản nộp CP4)
-# Thay mọi dòng "(ví dụ)" bằng số và nguồn của nhóm; simulate nhắc nếu còn sót.
+# Điền ngày 27/11/2026 (Phương). Số lần hỏi / tháng của 3 persona lấy đúng từ spec.md §2.
 
 sessions: 50        # số phiên mô phỏng — bản nộp ≥50
 seed: 42            # giữ cố định để chạy lại ra cùng chuỗi phiên
 
-users:              # số người dùng thật nếu đưa vào dùng — 3 kịch bản, ở quy mô thật của sản phẩm
-                    # track A: khoá học · track B–F: người dùng của sản phẩm / nhóm nhắm tới, nguồn công khai có link
-  low: 300
+users:              # số người dùng thật nếu đưa vào dùng — 3 kịch bản
+  low: 143
   base: 700
   high: 1000
-  source: "(ví dụ) track A — thay bằng số của nhóm. Cơ sở: lớp L3 hơn 700 học viên (README hackathon); thấp, cao: (tự ước tính)"
+  source: "Thấp: 143 học viên đã thực sự hỏi trợ giảng trong 05–25/11/2026 (chat.csv, evidence/data-mining.md). Cơ sở: lớp L3 hơn 700 học viên (README hackathon, như spec.md §2). Cao: 1.000 (tự ước tính, thêm học viên các lớp khác của khoá 5)"
 
 personas:           # ≥3 kiểu người dùng; share cộng lại = 1
+  # Mỗi phiên = 2 lượt hỏi: chat.csv có 1.091 câu hỏi, 438 câu là hỏi tiếp trong ≤120 giây,
+  # nên 1.091 − 438 = 653 chuỗi hỏi → 1.091 / 653 ≈ 1,67 câu / chuỗi, làm tròn lên 2 (tự ước tính).
+  # Số phiên / tháng = số lần hỏi / tháng (spec.md §2) chia 2, để tổng số lần hỏi / tháng giữ đúng như §2.
   - name: dung_it
-    share: 0.5              # tỉ lệ người dùng kiểu này
-    uses_per_month: 4       # số phiên / người / tháng
-    turns_per_session: 1    # số lượt hỏi trong một phiên
-    source: "(ví dụ) phỏng vấn P1, P3 — thay bằng nguồn của nhóm"
+    share: 0.25             # 25% thấp nhất ở khảo sát câu 6
+    uses_per_month: 4.5     # ≈9 lần hỏi / tháng ÷ 2 lượt
+    turns_per_session: 2
+    source: "Khảo sát câu 6 (n = 23, evidence/survey/results.csv): 25% thấp nhất ≤2 lần/tuần → ≈9 lần/tháng (spec.md §2, × 4,3 tuần tự ước tính); 2 lượt/phiên từ chat.csv (tự ước tính)"
   - name: dung_vua
-    share: 0.3
-    uses_per_month: 10
-    turns_per_session: 3
-    source: "(ví dụ) khảo sát n = 24, câu 3"
+    share: 0.5              # nhóm giữa
+    uses_per_month: 6.5     # ≈13 lần hỏi / tháng ÷ 2 lượt
+    turns_per_session: 2
+    source: "Khảo sát câu 6 (n = 23): trung vị 3 lần/tuần → ≈13 lần/tháng (spec.md §2, × 4,3 tuần tự ước tính); 2 lượt/phiên từ chat.csv (tự ước tính)"
   - name: dung_nhieu
-    share: 0.2
-    uses_per_month: 20
-    turns_per_session: 5
-    source: "(ví dụ) data/preclass: đếm số lượt / người — cách đếm ở evidence/data-mining.md"
+    share: 0.25             # 25% cao nhất
+    uses_per_month: 12      # ≈24 lần hỏi / tháng ÷ 2 lượt
+    turns_per_session: 2
+    source: "Khảo sát câu 6 (n = 23): 25% cao nhất ≥5,5 lần/tuần → ≈24 lần/tháng (spec.md §2, × 4,3 tuần tự ước tính); 2 lượt/phiên từ chat.csv (tự ước tính)"
 # Mỗi lượt hỏi lấy ngẫu nhiên một đầu vào trong eval/benchmark.csv (type thuong và kho).
-# Persona hỏi kiểu riêng: thêm vào persona đó
-#     types: [thuong, kho, tu_choi]
-# hoặc
-#     inputs: ["câu hỏi kiểu 1", "câu hỏi kiểu 2"]
 
-prices:             # USD / 1 triệu token — chép từ further-reading/model-prices.md của repo đề. ≥2 mức model
+prices:             # USD / 1 triệu token, gói trả phí Standard (không Batch). Đo token trên gemini-3.1-flash-lite.
   - model: gemini-3.1-flash-lite
     input: 0.25
     output: 1.50
-    source: "(ví dụ) https://ai.google.dev/gemini-api/docs/pricing · xem 25/11/2026"
-  - model: gemini-4-hydrogen
-    input: 1.50
-    output: 7.50
-    source: "(ví dụ) https://ai.google.dev/gemini-api/docs/pricing · xem 25/11/2026"
+    source: "https://ai.google.dev/gemini-api/docs/pricing (chuyển tới aistudio.google.com/docs/pricing) · xem 27/11/2026 · output gồm token suy nghĩ"
+  - model: gemini-3.8-flash
+    input: 0.75
+    output: 3.75
+    source: "https://ai.google.dev/gemini-api/docs/pricing · xem 27/11/2026 · giá đến 31/12/2026; từ 01/01/2027 tăng lên 1,50 / 7,50"
 
 usd_to_vnd:         # tuỳ chọn: điền thì bản tóm tắt in thêm tiền Việt
   rate:
