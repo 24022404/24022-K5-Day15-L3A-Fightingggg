@@ -109,7 +109,7 @@ flowchart TD
 
 ## §10. Phân công & changelog
 - Phân công có tên (theo chặng, chia cặp — guide "Cách chia việc"): __
-- Dùng AI vào việc gì (2–3 dòng; chi tiết `docs/ai-usage.md`):
+- Dùng AI vào việc gì (2–3 dòng; chi tiết `docs/ai-usage.md`): Claude (Anthropic) giúp viết giao diện web và mã `codebase/`, soạn `expected` và `pass_criterion` cho 11 câu thật, và nháp cột `pass` cho `run-3`, `run-4`. Người trong nhóm chạy `eval`, kiểm lại cột `pass`, và người thứ hai chấm độc lập 5 câu (`eval/README.md` mục 3).
 - Nhật ký thay đổi — **mọi thay đổi sau CP2 19:30 Thứ Sáu 27/11 phải có dòng ở đây**:
 
 **CP2 → CP4** (vd thu hẹp lát cắt, hỏi thêm người dùng, lần cải tiến trước lượt 2)
@@ -118,6 +118,9 @@ flowchart TD
 |---|---|---|
 | 17:16 Thứ Sáu 27/11 | Đổi nguồn kiểm lại bằng chứng pain từ phỏng vấn ≥3 người sang khảo sát Google Form ≥20 học viên khoá 5 (`evidence/survey/questions.md`); viết `evidence/hypothesis.md`; sửa canvas dòng 4, 7, spec §1, TEAMS.md theo | Khảo sát hỏi được nhiều người hơn trong thời gian còn lại trước CP3; câu 7 của form cho câu thử `nguoi_dung`. Dưới 20 người lúc 7:30 Thứ Bảy 28/11 thì phỏng vấn nhanh 3 người làm dự phòng |
 | 19:15 Thứ Sáu 27/11 | Thêm kết quả khảo sát 24 học viên khoá 5 (`evidence/summary.md` mục 6, `evidence/survey/results.csv`); chốt form sớm vì đã vượt 20 người; cập nhật canvas dòng 4 | Hai tiêu chí đặt trước ở `evidence/hypothesis.md` đều đạt nhưng sát ngưỡng (12/23 = 52,2% và 11/23 = 47,8%); phàn nàn chính là câu trả lời không đúng trọng tâm, rộng hơn giả thuyết ban đầu |
+| 21:05 Thứ Sáu 27/11 | Thay 11 câu tự viết (B03, B05, B09, B13, B14, B18, B19, B20, B21, B22, B29) bằng 11 câu thật của học viên từ khảo sát, giữ 30 câu; sửa dòng đếm câu ở §7 từ "thuong 14 · kho 11 · tu_choi 5" thành "thuong 12 · kho 13 · tu_choi 5". Không đổi chuẩn "đạt". | Cần ≥1/3 câu từ người dùng (trước đó 0/30) và CP3 chỉ cho 20–30 câu nên không thêm được, chỉ thay (`data/DATA_CARD.md` bản 3, `eval/README.md` mục 2). Lượt chạy thử `run-1` (18:38) dùng bộ cũ nên không tính. |
+| 21:15 Thứ Sáu 27/11 | Tăng thời gian chờ gọi model từ 60 lên 120 giây (`codebase/ai.py`). | `run-1` và `run-2` có 4 câu bị timeout (B26, B27; B13, B24), là lỗi kỹ thuật, không phải lỗi câu hỏi. `run-3` chạy sạch 30/30 câu. |
+| 21:24 Thứ Sáu 27/11 | Cải tiến trước lượt 2: bước tìm đoạn lấy 4 đoạn thay vì 3, thêm từ gợi ý và trọng số từ hiếm (`codebase/tools.py`); prompt từ chối yêu cầu kèm mã đoạn để tự đọc, và bước 4 chỉ cả bài nếu không có mã hợp lệ (`codebase/agent.py`). | Lượt 1 (`run-3`) trượt B12, B25 (từ chối không chỉ đoạn) và B17, B23 (tìm sót đoạn); xem `eval/report.md` mục 2 và 3. Kết quả lượt 2 (`run-4`) 30/30, nhưng bản sửa viết sau khi thấy lỗi trên chính bộ câu này. |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)** (sửa theo góp ý — không sửa chuẩn "đạt", câu thử, số bằng chứng, kết quả các lượt đã chạy)
 
