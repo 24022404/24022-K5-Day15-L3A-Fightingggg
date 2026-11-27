@@ -21,16 +21,17 @@ Data BTC cấp đã dùng (nếu có — không commit nguyên file): `data/prec
 
 | Hướng | Bao nhiêu người gặp | Bao nhiêu lần / tháng | Mỗi lần tốn gì | Impact / tháng | Làm kịp không | Chọn? |
 |---|---|---|---|---|---|---|
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |
+| A. Trợ giảng trả lời kèm mã đoạn để học viên tự kiểm | 700 học viên L3 (README hackathon); trong khảo sát 23/24 người từng hỏi trợ giảng | ≈13 (3 lần/tuần × 4,3 tuần; 3 lần/tuần là trung vị khảo sát câu 6, n = 23; quy ra tháng *(tự ước tính)*) | ≈10 phút (nhóm 5–15 phút là trung vị câu 5, n = 23; lấy giữa khoảng *(tự ước tính)*) | 700 × 13 × 10 = 91.000 phút ≈ 1.517 giờ thời gian đang bỏ vào hỏi và hiểu; chưa phải thời gian tiết kiệm được | Kịp: đã chạy thật, `eval/run-3.csv` 26/30 và `eval/run-4.csv` 30/30 | **Chọn** |
+| B. Tóm tắt video bài | 1/23 người nhắc tới trong câu 8 (R24); không có số khác | chưa có số | chưa có số | không tính được | Không kịp: nhóm không có bản chữ của video trong dữ liệu | Loại |
+| C. Đưa đáp án quiz hoặc viết hộ bài nộp | chưa đo | chưa có số | chưa có số | không tính được | Kịp về kỹ thuật, nhưng trái nguyên tắc học tập của nhóm (§4, câu thử B12, B25 yêu cầu từ chối) | Loại |
 
-- **Impact / tháng** của hướng chọn = __ người × __ lần × __ phút = __ — nguồn từng thừa số: __ (không có nguồn thì ghi rõ *(tự ước tính)*)
-- Hướng ĐÃ LOẠI + vì sao (giữ lại, đừng xoá):
-- Số lần / tháng của từng kiểu người dùng (dùng cho persona ở §8):
+- **Impact / tháng** của hướng chọn = 700 người × 13 lần × 10 phút = 91.000 phút (≈1.517 giờ) — nguồn từng thừa số: 700 = README hackathon ("lớp L3 hơn 700 học viên"); 13 = 3 lần/tuần (khảo sát câu 6, n = 23, trung vị, `evidence/survey/results.csv`) × 4,3 tuần *(tự ước tính)*; 10 phút = giữa nhóm 5–15 phút (khảo sát câu 5, n = 23, trung vị) *(tự ước tính)*. **Đây là thời gian đang bỏ vào việc hỏi và hiểu, không phải thời gian tiết kiệm được.** Mã đoạn chỉ giúp phần khó kiểm căn cứ: 12/23 = 52,2% chọn "không biết đoạn nào" hoặc "tin luôn" (câu 3, sát ngưỡng 50%), còn lời phàn nàn nhiều nhất là trả lời chung chung (11/23, câu 8), nên impact thật có thể thấp hơn con số trên nhiều (`evidence/summary.md` mục 6).
+- Hướng ĐÃ LOẠI + vì sao (giữ lại, đừng xoá): (B) tóm tắt video: chỉ 1/23 người nhắc tới và nhóm không có bản chữ của video để làm căn cứ có mã đoạn; (C) đưa đáp án quiz hoặc viết hộ: học viên mất cơ hội tự học và trái ý đồ của bài, nên thành câu `tu_choi` trong bộ câu thử.
+- Số lần / tháng của từng kiểu người dùng (dùng cho persona ở §8): dùng ít ≈ 9 (≤2 lần/tuần, mức 25% thấp nhất) · dùng vừa ≈ 13 (3 lần/tuần, trung vị) · dùng nhiều ≈ 24 (≥5,5 lần/tuần, mức 25% cao nhất). Nguồn: khảo sát câu 6, n = 23 (thấp nhất 0, cao nhất 18 lần/tuần, trung bình 4,8); quy ra tháng bằng 4,3 tuần *(tự ước tính)*. Số lần ở đây là lần hỏi, chưa tách theo phiên.
 
 ## §3. Giải pháp tương tự *(guide 2.1)*
-- [sản phẩm / tính năng gần giống]: một điều đáng học · một điều đáng né · mình khác gì
+- **NotebookLM (Google)** — trả lời kèm trích dẫn, bấm vào thì nhảy tới đúng đoạn trong nguồn ([hỗ trợ NotebookLM](https://support.google.com/notebooklm/answer/14276569)). Đáng học: cho người học tự kiểm câu trả lời bằng một cú bấm. Đáng né: làm nhiều thứ (tóm tắt, tạo tài liệu học) nên loãng; nhóm chỉ giữ một việc. Mình khác: gắn thẳng vào một bài của khoá, đoạn được đánh mã p01 đến p21, bước cuối bằng code kiểm mã có thật trong bài; từ chối khi bị đòi đáp án quiz hoặc viết hộ.
+- **Khanmigo (Khan Academy)** — trợ giảng hướng dẫn học viên tự tìm đáp án thay vì đưa đáp án ([khanmigo.ai](https://www.khanmigo.ai/)). Đáng học: chặn việc dùng AI làm hộ bài. Đáng né: một nghiên cứu lớn báo cáo khi Khanmigo từ chối và hỏi ngược lại thì học viên phần lớn thôi dùng ([KQED MindShift](https://www.kqed.org/mindshift/66662/students-didnt-get-answers-from-khanmigo-they-didnt-want-its-questions-either)). Mình khác: không dạy kiểu hỏi dắt; câu hỏi hiểu bài được trả lời thẳng kèm mã đoạn, chỉ từ chối khi bị đòi đáp án hoặc viết hộ.
 
 ## §4. Thiết kế *(guide 2.2, 3.2)*
 - **Lát cắt MỘT CÂU** (1 người dùng · 1 việc · 1 quyết định AI · 1 kết quả): Một học viên hỏi một câu dưới bài; trợ giảng quyết định trả lời kèm mã đoạn, hỏi lại, hay nói "không có trong bài"; học viên tự kiểm bằng cách mở đúng đoạn.
