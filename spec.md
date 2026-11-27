@@ -13,9 +13,9 @@ Data BTC cấp đã dùng (nếu có — không commit nguyên file): `data/prec
 ## §1. Người dùng & bằng chứng *(guide 1.1, 1.2)*
 - Người dùng chính (một vai cụ thể): học viên AI20K khoá 5 tự học bài trước giờ lên lớp trên trang pre-class.
 - Việc họ cố làm xong (`động từ + đối tượng + bối cảnh`, không có chữ AI): hiểu đúng một ý chưa rõ trong bài trước giờ lên lớp và tự kiểm được là hiểu đúng.
-- Hôm nay họ giải bằng gì, hỏng ở đâu, vì sao chưa bỏ: hỏi trợ giảng dưới video. Hỏng ở đâu: giả thuyết là câu trả lời khó kiểm vì không chỉ rõ đoạn căn cứ (chưa kiểm, cần phỏng vấn ≥3 bạn trong lớp). Vì sao chưa bỏ: chưa có cách khác ngay trong trang.
+- Hôm nay họ giải bằng gì, hỏng ở đâu, vì sao chưa bỏ: hỏi trợ giảng dưới video. Hỏng ở đâu: giả thuyết là câu trả lời khó kiểm vì không chỉ rõ đoạn căn cứ (chưa kiểm, đang kiểm bằng khảo sát ≥20 học viên khoá 5: `evidence/survey/questions.md`, giả thuyết ở `evidence/hypothesis.md`). Vì sao chưa bỏ: chưa có cách khác ngay trong trang.
 - Pain (KHÔNG chữ AI): học viên đang xem bài trước giờ lên lớp — hỏi một ý chưa rõ — không biết câu trả lời dựa vào đoạn nào của bài, nên hỏi lặp lại hoặc phải tin mà không kiểm — mất thời gian và có thể mang hiểu sai vào buổi học.
-- Bằng chứng — số chính + kết luận (chi tiết: `evidence/data-mining.md`): 438/1.091 câu hỏi (40,1%, từ 91/143 học viên) là hỏi tiếp trong ≤120 giây cùng video; 70/1.091 (6,4%) câu ≤10 ký tự; 26/1.091 (2,4%) trả lời tức thì (<0,5 giây). Kết luận tạm: có tín hiệu hỏi lặp và câu quá ngắn; **chưa đủ kết luận** vì data không có nội dung, cần phỏng vấn để xác nhận.
+- Bằng chứng — số chính + kết luận (chi tiết: `evidence/data-mining.md`): 438/1.091 câu hỏi (40,1%, từ 91/143 học viên) là hỏi tiếp trong ≤120 giây cùng video; 70/1.091 (6,4%) câu ≤10 ký tự; 26/1.091 (2,4%) trả lời tức thì (<0,5 giây). Kết luận tạm: có tín hiệu hỏi lặp và câu quá ngắn; **chưa đủ kết luận** vì data không có nội dung, cần khảo sát để xác nhận (form mở 16:47 Thứ Sáu 27/11, chốt 9:00 Thứ Bảy 28/11).
 
 ## §2. Impact & quyết định chọn *(guide 1.3)*
 
@@ -116,7 +116,7 @@ flowchart TD
 
 | Thời điểm | Đổi gì | Vì sao (trỏ về câu thử / lỗi / bằng chứng nào) |
 |---|---|---|
-|  |  |  |
+| 17:16 Thứ Sáu 27/11 | Đổi nguồn kiểm lại bằng chứng pain từ phỏng vấn ≥3 người sang khảo sát Google Form ≥20 học viên khoá 5 (`evidence/survey/questions.md`); viết `evidence/hypothesis.md`; sửa canvas dòng 4, 7, spec §1, TEAMS.md theo | Khảo sát hỏi được nhiều người hơn trong thời gian còn lại trước CP3; câu 7 của form cho câu thử `nguoi_dung`. Dưới 20 người lúc 7:30 Thứ Bảy 28/11 thì phỏng vấn nhanh 3 người làm dự phòng |
 
 **Sau CP4 (đến 23:59 Thứ Bảy 28/11)** (sửa theo góp ý — không sửa chuẩn "đạt", câu thử, số bằng chứng, kết quả các lượt đã chạy)
 
