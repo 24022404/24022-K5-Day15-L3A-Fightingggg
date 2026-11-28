@@ -28,7 +28,7 @@
 
 **Data `synthetic` (nhóm tự viết):** viết tay, không sinh bằng script nên không có seed. Số đoạn đã kiểm tay: 21/21. **AI đối chiếu** (Claude Code, 27/11/2026): 13/13 đoạn p09 đến p21 khớp với mục nguồn được ghi, chi tiết và 3 điểm cần xem ở `data/KIEM-NGUON.md` phần 3; đây chưa phải kiểm tay, cần một người đọc lại rồi mới cập nhật số này (cần kiểm trước CP3, nhất là p09 đến p21 so với sách nguồn).
 
-**Nội dung mở rộng trong bản web (không thuộc Dataset 2):** mỗi trang bài trong `streamlit_app.py` có thêm một ví dụ nhóm tự viết và 1 đến 3 liên kết "Đọc thêm" tới nguồn công khai trên web (tìm ngày 27/11/2026: Harvard Chan, IBM, Cloudflare, AWS, Mistral, web.dev, Thoughtworks, Arize, Viblo, Zapier và các trang tương tự). Chỉ có liên kết và tiêu đề, không chép nội dung. Trợ giảng chỉ dựa vào 8 đoạn của Dataset 2, không dựa vào ví dụ hay liên kết này, nên bộ câu thử và chuẩn "đạt" không đổi.
+**Nội dung mở rộng trong bản web (không thuộc Dataset 2):** mỗi trang bài trong web (`server.py`, `static/`) có thêm một ví dụ nhóm tự viết và 1 đến 3 liên kết "Đọc thêm" tới nguồn công khai trên web (tìm ngày 27/11/2026: Harvard Chan, IBM, Cloudflare, AWS, Mistral, web.dev, Thoughtworks, Arize, Viblo, Zapier và các trang tương tự). Chỉ có liên kết và tiêu đề, không chép nội dung. Trợ giảng chỉ dựa vào 21 đoạn p01 đến p21 của Dataset 2, không dựa vào ví dụ hay liên kết này, nên bộ câu thử và chuẩn "đạt" không đổi.
 
 ## Dataset 3 · Bộ câu thử (`eval/benchmark.csv`)
 

@@ -126,5 +126,5 @@ Claude (Anthropic) giúp viết giao diện web, mã `codebase/`, một phần `
 | 4 | Bản chạy thử làm trọn lát cắt | `codebase/` · lệnh ở mục "Lệnh" |
 | 5 | Định nghĩa "tốt" + bộ câu thử | `data/DATA_CARD.md` · `eval/` |
 | 6 | Mô phỏng chi phí khi dùng thật | `cost/` |
-| 7 | Slide + demo + video dự phòng | slide: [`slides/demo-slides.pptx`](slides/demo-slides.pptx) (bản PDF `demo-slides.pdf` xuất trước CP4) · link video: [`demo-video.mp4`](https://github.com/ducminhnwork/K5-Day15-L3A-Fightingggg/blob/main/demo-video.mp4) (39 giây, quay web demo ngày 27/11/2026: hỏi B13 "LLM là gì", B29 "SLO là gì?" và "ok") |
+| 7 | Slide + demo + video dự phòng | slide: [`slides/demo-slides.pptx`](slides/demo-slides.pptx) (bản PDF [`demo-slides.pdf`](demo-slides.pdf) ở thư mục gốc, đã nộp ở CP4) · link video: bản đã nộp ở form CP3/CP4 (link Google Drive); bản sao [`demo-video.mp4`](https://github.com/ducminhnwork/K5-Day15-L3A-Fightingggg/blob/main/demo-video.mp4) trong repo (39 giây, quay web demo ngày 27/11/2026: hỏi B13 "LLM là gì", B29 "SLO là gì?" và "ok") |
 | + | *Bonus:* người dùng thử | `validation/log.md` |
