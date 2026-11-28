@@ -130,3 +130,4 @@ flowchart TD
 |---|---|---|
 | 07:25 Thứ Bảy 28/11 | Làm lại giao diện web (nhận diện riêng, bỏ phần trùng, hiện các bước trợ giảng đã làm). Không đổi `codebase/agent.py`, `eval/`, bộ câu thử hay chuẩn "đạt". | Bản demo trông như sản phẩm thật hơn; số 26/30 và 30/30 vẫn khớp code vì phần quyết định không đổi |
 | 16:40 Thứ Bảy 28/11 | Sửa chữ cũ trong `data/DATA_CARD.md` ("8 đoạn" thành 21 đoạn, `streamlit_app.py` thành `server.py`), cập nhật dòng 7 ở README (PDF đã có, link video đã nộp), thêm reflection của Minh. Không đổi số liệu, câu thử, chuẩn "đạt" hay kết quả các lượt. | Cho tài liệu khớp với bản đã nộp ở CP3 và CP4 |
+| 16:50 Thứ Bảy 28/11 | `data/DATA_CARD.md`: sửa "Số đoạn đã kiểm tay" từ 21/21 thành 0/21; thêm reflection của Long. Không đổi số liệu nào khác. | Chưa có ai đọc lại nguồn cho p09 đến p21; chỉ có AI đối chiếu 13/13 (`data/KIEM-NGUON.md` phần 3). Ba file (data card, KIEM-NGUON, README) giờ cùng ghi chưa kiểm tay |
