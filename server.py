@@ -21,7 +21,7 @@ from pydantic import BaseModel  # noqa: E402
 
 import tracing  # noqa: E402
 from agent import answer, NO_ANSWER, REFUSE_REPLY  # noqa: E402
-from tools import load_passages  # noqa: E402
+from tools import load_passages, search_lesson  # noqa: E402
 
 app = FastAPI(title="Lớp học AI20K - trợ giảng", docs_url=None, redoc_url=None)
 PASSAGES = load_passages()
@@ -47,6 +47,31 @@ def classify(out):
     if out.rstrip().endswith("?"):
         return "ask"
     return "other"
+
+
+def build_steps(events, found):
+    """Chuyển trace thật của một lượt hỏi thành các bước cho giao diện. Không bịa: chỉ bước nào thật sự chạy mới hiện."""
+    notes = [e.get("text", "") for e in events if e["kind"] == "note"]
+    steps = []
+    blocked1 = next((t for t in notes if t.startswith("chặn bước 1")), None)
+    steps.append({"n": 1, "by": "code", "t": "Kiểm tra câu hỏi",
+                  "d": ("Chặn: " + blocked1.split(":", 1)[-1].strip()) if blocked1 else "Hợp lệ, không chèn chỉ dẫn"})
+    for e in events:
+        if e["kind"] == "tool" and e.get("name") == "search_lesson":
+            codes = [p["code"] for p in found]
+            steps.append({"n": 2, "by": "code", "t": "Tìm đoạn trong bài", "s": e.get("latency_s"),
+                          "d": ("Tìm thấy " + ", ".join(codes)) if codes else "Không tìm thấy đoạn nào"})
+        if e["kind"] == "model":
+            m = re.search(r"QUYET_DINH:\s*(TRA_LOI|HOI_LAI|KHONG_CO|TU_CHOI)", e.get("output", ""))
+            label = {"TRA_LOI": "trả lời có căn cứ", "HOI_LAI": "hỏi lại cho rõ", "KHONG_CO": "không có trong bài",
+                     "TU_CHOI": "từ chối"}.get(m.group(1)) if m else "không rõ nhãn"
+            steps.append({"n": 3, "by": "model", "t": "AI quyết định", "s": e.get("latency_s"),
+                          "d": "%s · %s · token %s/%s" % (label, e.get("model") or "model", e.get("tokens_in", 0), e.get("tokens_out", 0))})
+    if any(x["n"] == 3 for x in steps):
+        b4 = next((t for t in notes if "bước 4" in t), None)
+        steps.append({"n": 4, "by": "code", "t": "Kiểm mã đoạn",
+                      "d": ("Sửa: " + b4.split(":", 1)[-1].strip()) if b4 else "Mã đoạn hợp lệ (p01 đến p21)"})
+    return steps
 
 
 class Ask(BaseModel):
@@ -132,13 +157,14 @@ def ask(body: Ask, request: Request):
         out = answer(q)["output"]
     except Exception as e:  # lỗi gọi model
         out = "Lỗi khi gọi model: %s" % e
-    summary, _ = tracing.end()
+    summary, events = tracing.end()
     summary = summary or {}
     codes = [c for c in dict.fromkeys(re.findall(r"\bp\d{2}\b", out)) if c in CODES]
     return {
         "out": out, "kind": classify(out), "codes": codes,
         "models": summary.get("models", []), "tokens_in": summary.get("tokens_in", 0),
         "tokens_out": summary.get("tokens_out", 0), "sec": round(time.time() - t0, 1),
+        "steps": build_steps(events, search_lesson(q)),
     }
 
 
